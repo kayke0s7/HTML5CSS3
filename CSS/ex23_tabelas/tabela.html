@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas grandes</title>
     <style>
+        * {
+            margin: 0%;
+        }
         body {
             font-family: Arial, sans-serif;
         }
         table {
             width: 400px;
             border-collapse: collapse;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            color: darkblue;
+            padding: 8px;
         }
         td, th {
             border : 1px solid black;
@@ -24,10 +35,11 @@
 </head>
 <body>
     <table>
+        <caption>População dos Estados Brasileiros</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>  
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>  
             </tr>
 
         </thead>
@@ -47,8 +59,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <td><strong>Total</strong></td>
-                <td>84.948.188</td>
+                <th scope="row"><strong>Total</strong></th>
+                <th>84.948.188</th>
             </tr>
         </tfoot>
     </table>
